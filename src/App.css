@@ -1,0 +1,211 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@font-face {
+  font-family: zenDot;
+  src: url('./Assets/Fonts/zen-dots.ttf');
+}
+
+@font-face {
+  font-family: IBMPlexSans-Medium;
+  src: url('./Assets/Fonts/IBMPlexSans-Medium.ttf')
+}
+
+@font-face {
+  font-family: IBMPlexSans-Regular;
+  src: url('./Assets/Fonts/IBMPlexSans-Regular.ttf')
+}
+
+.fontFamily-ZenDot {
+  font-family: zenDot;
+}
+
+.fontFamily-IBMPlex-Medium {
+  font-family: IBMPlexSans-Medium;
+}
+
+.fontFamily-IBMPlex-Regular {
+  font-family: IBMPlexSans-Regular;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  transform: rotateY(-180deg);
+}
+
+.box::before {
+  position: absolute;
+  padding: 5rem;
+  margin: -5rem;
+  transform: rotateZ(45deg);
+  background: #080216;
+  box-shadow: 0 0 0 50rem transparent;
+  content: ''
+}
+
+.timeline-dot-left, .timeline-dot-right {
+  position: relative;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #f6127e;
+  border-radius: 50%;
+  animation: raidar-effect 2s infinite;
+}
+
+.timeline-dot-left::after {
+  content: '';
+  position: absolute;
+  width: 7.5rem;
+  height: 1.5px;
+  background-color: #f6127e;
+  top: 50%;
+}
+
+.timeline-dot-right::before {
+  content: '';
+  position: absolute;
+  width: 7rem;
+  height: 1.5px;
+  background-color: #f6127e;
+  top: 50%;
+  left: -7rem;
+}
+
+.timeline-content-left, .timeline-content-right {
+  position: relative;
+  background-color: rgba(246, 18, 126, 0.1);
+  margin: 0 5rem;
+  padding: 2.5rem 2rem 3rem 2rem;
+}
+
+.timeline-content-left:before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: -0.9rem;
+  width: 0;
+  z-index: 1;
+  left: 4rem;
+  border: 7px solid;
+  border-color: transparent transparent rgba(246, 18, 126, 0.1) transparent;
+}
+
+.timeline-content-right:before {
+  content: '';
+  height: 0;
+  position: absolute;
+  top: -0.9rem;
+  width: 0;
+  z-index: 1;
+  right: 4rem;
+  border: 7px solid;
+  border-color: transparent transparent rgba(246, 18, 126, 0.1) transparent;
+}
+
+@media only screen and (max-width: 1024px) {
+  .timeline-content-left, .timeline-content-right {
+    position: relative;
+    background-color: rgba(246, 18, 126, 0.1);
+    margin: 0 0rem;
+    padding: 2.5rem 2rem 3rem 2rem;
+  }
+  
+  .timeline-content-left:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: -0.9rem;
+    width: 0;
+    z-index: 1;
+    left: 10rem;
+    border: 7px solid;
+    border-color: transparent transparent rgba(246, 18, 126, 0.1) transparent;
+  }
+
+  .timeline-content-right:before {
+    content: '';
+    height: 0;
+    position: absolute;
+    top: -0.9rem;
+    width: 0;
+    z-index: 1;
+    right: 10rem;
+    border: 7px solid;
+    border-color: transparent transparent rgba(246, 18, 126, 0.1) transparent;
+  }
+}
+
+@keyframes raidar-effect {
+  0% {
+    box-shadow: 0 0 0 0.01rem rgba(246, 18, 126, 1);
+  }
+  100% {
+    box-shadow: 0 0 0 1.5rem rgba(246, 18, 126, 0);
+  }
+}
+
+.card {
+  width: 18.75rem;
+  height: 22.5rem;
+}
+
+.container-team {
+  background-image: linear-gradient(180deg, rgba(246, 18, 126, 0.5), transparent);
+}
+
+.button-pink {
+  color: black;
+  background-color: white;
+  transition: all .2s ease-in;
+}
+
+.button-pink:hover {
+  color: white;
+  background-color: #f6127e;
+}
+
+.team-card {
+  opacity: 0;
+  background-image: linear-gradient(180deg, transparent, rgba(246, 18, 126, 0.2), rgba(246, 18, 126, 0.8));
+}
+
+.team-card-container:hover .team-card {
+  opacity: 1
+}
