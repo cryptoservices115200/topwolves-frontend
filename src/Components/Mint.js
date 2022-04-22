@@ -31,16 +31,20 @@ class Mint extends React.Component {
     //     </>
     //   )
     CoundownRenderer({ days, hours, minutes, seconds, completed }) {
+        console.log(completed);
         return (
             <>
                 <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl shadow'
                     // style={{color:'#f6127e96'}}
-                >
-                    Count Down
+                > Count Down
                 </h1>
                 <br/><br/><br/>
-                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl'>
-                    {zeroPad(days) + 'd : ' + zeroPad(hours) + 'h : ' + zeroPad(minutes) + 'min : ' + zeroPad(seconds) + 's'}
+                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-6xl'>
+                    {/* {zeroPad(days) + 'd : ' + zeroPad(hours) + 'h : ' + zeroPad(minutes) + 'min : ' + zeroPad(seconds) + 's'} */}
+                    <p className="timeRegion">{zeroPad(days)}d :</p>
+                    <p className="timeRegion">{zeroPad(hours)}h :</p>
+                    <p className="timeRegion">{zeroPad(minutes)}m :</p>
+                    <p className="timeRegion">{zeroPad(seconds)}s</p>
                 </h1>
 
                 <br/><br/><br/>

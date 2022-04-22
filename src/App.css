@@ -214,3 +214,12 @@
 .shadow {
   text-shadow: 1px 0 0 #f6127e50, -1px 0 0 #f6127e50, 0 1px 0 #f6127e50, 0 -1px 0 #f6127e50, 1px 1px #f6127e50, -1px -1px 0 #f6127e50, 1px -1px 0 #f6127e50, -1px 1px 0 #f6127e50;
 }
+
+.timeRegion {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  min-width: 25%;
+  max-width: 25%;
+  float: left;
+}
