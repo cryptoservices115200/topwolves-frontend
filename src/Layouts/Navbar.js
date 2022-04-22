@@ -54,7 +54,7 @@ class Navbar extends React.Component {
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#roadmap'>Roadmap</a></li>
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#team'>Our Team</a></li>
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#faq'>FAQ</a></li>
-                        <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='https://app.gitbook.com/invite/MpxPCvm0SK6usCdstFbe/jumJIz5GxQT608yNVxWL' target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
+                        <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='pdf/Whitepaper.pdf' target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
                     </ul>
                     <div className='space-x-6 flex flex-grow'>
                         <a href='https://twitter.com/TopWolvesNFT' target="_blank" rel="noopener noreferrer">

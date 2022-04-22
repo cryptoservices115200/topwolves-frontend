@@ -1,5 +1,8 @@
 import React from 'react'
-import eventBus from '../Components/EventBus'
+import Countdown, { zeroPad } from "react-countdown";
+import eventBus from '../Components/EventBus';
+
+const date1 = 1652047200000;
 
 class Mint extends React.Component {
 
@@ -10,6 +13,7 @@ class Mint extends React.Component {
             mintCount: 1,
             mintPrice: 0
         }
+        
     }
 
     componentDidMount() {
@@ -21,16 +25,48 @@ class Mint extends React.Component {
         })
     }
 
+    // const CoundownRenderer = ({ days, hours, minutes, seconds }) => (
+    //     <>
+    //       {days} d {hours} h, {minutes} m, {seconds} s
+    //     </>
+    //   )
+    CoundownRenderer({ days, hours, minutes, seconds, completed }) {
+        return (
+            <>
+                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl shadow'
+                    // style={{color:'#f6127e96'}}
+                >
+                    Count Down
+                </h1>
+                <br/><br/><br/>
+                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl'>
+                    {zeroPad(days) + 'd : ' + zeroPad(hours) + 'h : ' + zeroPad(minutes) + 'min : ' + zeroPad(seconds) + 's'}
+                </h1>
+
+                <br/><br/><br/>
+
+            </>
+          );
+    }
+
     render() {
         return (
             <div className='py-1' style={{
                 backgroundImage: 'linear-gradient(90deg, rgba(246, 18, 126, 0.9), rgba(246, 18, 126, 0.5), rgba(246, 18, 126, 0.2), transparent)'
             }}>
+                
                 <div className='flex flex-wrap justify-center py-5rem lg:py-7rem' style={{
                     backgroundColor: '#080216'
                 }}>
+                    {/* <div className='text-white flex flex-wrap justify-center py-5rem lg:py-7rem'>
+                        
+                    </div> */}
                     <div className='flex flex-col w-1/2 space-y-12'>
                         <div className='flex flex-col w-full space-y-5 text-center'>
+                            <div className='text-white' >
+                                <Countdown date={date1} renderer={this.CoundownRenderer} />
+                            </div>
+
                             <h1 className='text-white text-2xl font-bold fontFamily-ZenDot
                                             sm:text-3xl md:text-4xl lg:text-5xl'
                             >

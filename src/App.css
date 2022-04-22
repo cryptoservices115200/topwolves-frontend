@@ -209,3 +209,8 @@
 .team-card-container:hover .team-card {
   opacity: 1
 }
+
+
+.shadow {
+  text-shadow: 1px 0 0 #f6127e50, -1px 0 0 #f6127e50, 0 1px 0 #f6127e50, 0 -1px 0 #f6127e50, 1px 1px #f6127e50, -1px -1px 0 #f6127e50, 1px -1px 0 #f6127e50, -1px 1px 0 #f6127e50;
+}
