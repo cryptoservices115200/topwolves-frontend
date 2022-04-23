@@ -43,19 +43,19 @@ class Mint extends React.Component {
                 <div className='w-full flex flex-row mb-30'>
                     <div className = "timeContainer">
                         <p className="timeRegion">{zeroPad(days)}</p>
-                        <p className="timeUnit">days</p>
+                        <p className="timeUnit">Days</p>
                     </div>
                     <div className = "timeContainer">
                         <p className="timeRegion">{zeroPad(hours)}</p>
-                        <p className="timeUnit">hours</p>
+                        <p className="timeUnit">Hours</p>
                     </div>
                     <div className = "timeContainer">
                         <p className="timeRegion">{zeroPad(minutes)}</p>
-                        <p className="timeUnit">minutes</p>
+                        <p className="timeUnit">Minutes</p>
                     </div>
                     <div className = "timeContainer">
                         <p className="timeRegion">{zeroPad(seconds)}</p>
-                        <p className="timeUnit">seconds</p>
+                        <p className="timeUnit">Seconds</p>
                     </div>
                 </div>
 
