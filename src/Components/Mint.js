@@ -1,6 +1,7 @@
 import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
+import Flex from '@react-css/flex'
 
 const date1 = 1652047200000;
 
@@ -34,20 +35,29 @@ class Mint extends React.Component {
         console.log(completed);
         return (
             <>
-                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl shadow'
+                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl mb-30 shadow'
                     // style={{color:'#f6127e96'}}
                 > Count Down
                 </h1>
-                <br/><br/><br/>
-                <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-6xl'>
-                    {/* {zeroPad(days) + 'd : ' + zeroPad(hours) + 'h : ' + zeroPad(minutes) + 'min : ' + zeroPad(seconds) + 's'} */}
-                    <p className="timeRegion">{zeroPad(days)}d :</p>
-                    <p className="timeRegion">{zeroPad(hours)}h :</p>
-                    <p className="timeRegion">{zeroPad(minutes)}m :</p>
-                    <p className="timeRegion">{zeroPad(seconds)}s</p>
-                </h1>
 
-                <br/><br/><br/>
+                <div className='w-full flex flex-row mb-30'>
+                    <div className = "timeContainer">
+                        <p className="timeRegion">{zeroPad(days)}</p>
+                        <p className="timeUnit">days</p>
+                    </div>
+                    <div className = "timeContainer">
+                        <p className="timeRegion">{zeroPad(hours)}</p>
+                        <p className="timeUnit">hours</p>
+                    </div>
+                    <div className = "timeContainer">
+                        <p className="timeRegion">{zeroPad(minutes)}</p>
+                        <p className="timeUnit">minutes</p>
+                    </div>
+                    <div className = "timeContainer">
+                        <p className="timeRegion">{zeroPad(seconds)}</p>
+                        <p className="timeUnit">seconds</p>
+                    </div>
+                </div>
 
             </>
           );
@@ -80,9 +90,9 @@ class Mint extends React.Component {
                                 Each Jacked Ape is available to mint for {this.state.mintPrice / (10**18)}ETH.
                             </p>
                         </div>
-                        <div className='w-full flex flex-col space-y-5'>
+                        <div className='w-1/2 justify-center flex flex-col space-y-5 m0auto'>
                             <input
-                                className='bg-transparent border-2 rounded-full px-7 py-2 text-white focus:outline-none' 
+                                className='bg-transparent border-2 rounded-full px-4 py-2 text-white focus:outline-none' 
                                 style={{
                                     borderColor: '#f6127e96'
                                 }}
@@ -91,7 +101,7 @@ class Mint extends React.Component {
                                 value={(this.state.mintPrice * this.state.mintCount / (10**18))} readOnly>
                             </input>
                             <input
-                                className='bg-transparent border-2 rounded-full px-7 py-2 text-white focus:outline-none'
+                                className='bg-transparent border-2 rounded-full px-4 py-2 text-white focus:outline-none'
                                 style={{
                                     borderColor: '#f6127e96'
                                 }}
