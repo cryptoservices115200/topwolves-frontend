@@ -120,7 +120,7 @@ class Mint extends React.Component {
                             <button
                                 className='bg-white w-full py-2 rounded-full hover:bg-pink hover:text-white'
                                 // {...this.state.countdown == 1? '':'disabled'}
-                                // disabled = {this.state.countdown? "true": "false"}
+                                disabled = {this.state.countdown? "true": "false"}
                                 onClick={() => eventBus.dispatch('mint', { mintCount: this.state.mintCount, mintPrice: this.state.mintPrice })}>Mint Now</button>
                         </div>
                     </div>
