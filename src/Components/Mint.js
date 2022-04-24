@@ -1,7 +1,6 @@
 import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
-import Flex from '@react-css/flex'
 
 const date1 = 1652047200000;
 
@@ -12,7 +11,8 @@ class Mint extends React.Component {
 
         this.state = {
             mintCount: 1,
-            mintPrice: 0
+            mintPrice: 0,
+            countdown: false
         }
         
     }
@@ -32,7 +32,9 @@ class Mint extends React.Component {
     //     </>
     //   )
     CoundownRenderer({ days, hours, minutes, seconds, completed }) {
-        console.log(completed);
+        if(completed == true)
+            this.setState({countdown:true});
+
         return (
             <>
                 <h1 className='text-white text-2xl font-bold fontFamily-ZenDot sm:text-3xl md:text-4xl lg:text-5xl mb-30 shadow'
@@ -117,6 +119,8 @@ class Mint extends React.Component {
                             </input>
                             <button
                                 className='bg-white w-full py-2 rounded-full hover:bg-pink hover:text-white'
+                                // {...this.state.countdown == 1? '':'disabled'}
+                                disabled = {this.state.countdown? "true": "false"}
                                 onClick={() => eventBus.dispatch('mint', { mintCount: this.state.mintCount, mintPrice: this.state.mintPrice })}>Mint Now</button>
                         </div>
                     </div>

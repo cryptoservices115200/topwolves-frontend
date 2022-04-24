@@ -7,7 +7,6 @@
     "@craco/craco": "^5.9.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@react-css/flex": "^1.6.2",
     "@testing-library/jest-dom": "^5.16.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
