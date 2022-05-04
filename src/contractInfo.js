@@ -1,5 +1,5 @@
 const contractInfo = {
-	address: "0xbce8da6aaf23fa8877b6939a07f9a00a522dbc67",
+	address: "0xB1A1a53C475501F1D57946601f516b071Fd1987b",
 	abi: [
 		{
 			"inputs": [],

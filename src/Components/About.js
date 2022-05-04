@@ -14,9 +14,9 @@ class About extends React.Component {
                         </div>
 
                         <div className='flex flex-col justify-center space-y-0 w-full lg:space-y-8 lg:w-1/2'>
-                            <h1 className='text-white text-4xl font-bold fontFamily-ZenDot hidden sm:text-5xl md:text-6xl lg:text-6xl lg:block'>About Us</h1>
+                            <h1 className='text-white text-4xl font-bold fontFamily-ZenDot hidden sm:text-5xl md:text-6xl lg:text-6xl lg:block'>The Story</h1>
                             <p className='text-white fontFamily-IBMPlex-Regular leading-loose lg:text-left'>
-                                Legends describe this game is like no other where the possibilities are endless and the money you can make is unlimited, a game so rare, only the most prestigious will have access. Whether you are a lone wolf or wish to hunt in a pack only 5555 suave wolves who embody instinctive powers and intelligence have found the key to access this game. Today this legend becomes a reality, claim your wolf to immerse yourself in our unrivalled gaming experience.
+                                Legends describe this game is like no other where the possibilities are endless and the money you can make is unlimited, a game so rare, only the most prestigious will have access. Whether you are a lone wolf or wish to hunt in a pack only 1111 suave wolves who embody instinctive powers and intelligence have found the key to access this game. Today this legend becomes a reality, claim your wolf to immerse yourself in our unrivalled P2E gaming experience.
                             </p>
                             <div className='button-pink rounded-full w-max hidden'>
                                 <a className="text-md font-bold px-7 py-2 block cursor-pointer" href="/">BUY NOW</a>

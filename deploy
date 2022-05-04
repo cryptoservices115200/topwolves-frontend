@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Configure aws"
+aws configure
+
+echo "Deploying to aws"
+aws amplify update-app --repository https://github.com/skravin/Development 

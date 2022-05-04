@@ -18,7 +18,7 @@ class Navbar extends React.Component {
         const len = address.length
         return address.slice(0, 4) + '...' + address.slice(len - 4, len) + ' | ' + (this.state.balance / 1e18).toFixed(2) + 'ETH'
     }
-    
+
     componentDidMount() {
         eventBus.on('isConnected', (_event) => {
             this.setState({
@@ -46,11 +46,11 @@ class Navbar extends React.Component {
                 </div>
 
                 <div className={
-                    'bg-primary rounded-lg space-y-5 w-full p-5 place-items-center xl:space-y-0 xl:space-x-10 xl:bg-transparent xl:flex xl:w-auto xl:p-0' + 
+                    'bg-primary rounded-lg space-y-5 w-full p-5 place-items-center xl:space-y-0 xl:space-x-10 xl:bg-transparent xl:flex xl:w-auto xl:p-0' +
                     (this.state.navbarOpen ? ' flex flex-col' : ' hidden')
                 }>
                     <ul className="flex flex-col place-items-center list-none w-full font-bol text-center xl:font-normal xl:flex-row xl:w-auto xl:ml-auto relative text-white text-md xl:space-x-6">
-                        <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#about'>Who we are</a></li>
+                        <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#about'>Our Story</a></li>
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#roadmap'>Roadmap</a></li>
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#team'>Our Team</a></li>
                         <li className='xl:float-left xl:text-base xl:w-auto xl:p-auto xl:hover:bg-transparent p-3 w-full text-2xl cursor-pointer hover:bg-gray-900'><a href='#faq'>FAQ</a></li>
@@ -62,7 +62,7 @@ class Navbar extends React.Component {
                                 <i className='fab fa-twitter'></i>
                             </span>
                         </a>
-                        <a href='https://discord.gg/4n8Dz23bVR' target="_blank" rel="noopener noreferrer">
+                        <a href='https://discord.gg/ueCVC5TrgZ' target="_blank" rel="noopener noreferrer">
                             <span className='text-white text-xl cursor-pointer'>
                                 <i className='fab fa-discord'></i>
                             </span>

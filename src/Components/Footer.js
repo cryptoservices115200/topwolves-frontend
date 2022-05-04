@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Footer extends React.Component {
-    
+
     render() {
         return (
             <div className='flex flex-col place-items-center space-y-20 px-3rem lg:px-8rem'>
@@ -16,15 +16,15 @@ class Footer extends React.Component {
                                     <i className='fab fa-twitter'></i>
                                 </span>
                             </a>
-                            <a href='https://discord.gg/4n8Dz23bVR' target="_blank" rel="noopener noreferrer">
+                          <a href='https://discord.gg/ueCVC5TrgZ' target="_blank" rel="noopener noreferrer">
                                 <span className='text-white text-xl cursor-pointer'>
                                     <i className='fab fa-discord'></i>
                                 </span>
                             </a>
                         </div>
                     </div>
-                    <div className='bg-white text-black rounded-full w-max h-max'>
-                        <a className="text-sm font-bold px-12 py-2 block cursor-pointer" href="https://discord.gg/4n8Dz23bVR" target="_blank" rel="noopener noreferrer">JOIN NOW</a>
+                    <div className='button-pink text-black rounded-full w-max h-max hidden lg:block'>
+                        <a className="text-2xl font-bold fontFamily-ZenDot px-12 py-2 block cursor-pointer" href="https://discord.gg/ueCVC5TrgZ" target="_blank" rel="noopener noreferrer">Join The Pack</a>
                     </div>
                 </div>
 
@@ -33,7 +33,7 @@ class Footer extends React.Component {
                         <img src='/Images/logo.png' alt='logo_image'></img>
                     </div>
                     <p className='fontFamily-IBMPlex-Regular max-w-full text-white text-md md:max-w-1/2 leading-loose'>
-                    A detailed collection of 5555 hand drawn 3D NFTs designed for alphas in the NFT space. Each NFT will grant holders with access to a P2E betting game where you can bet on the floor price of NFTs and be rewarded in ETH for betting accurately.
+                        A unique collection of 1111 detailed, hand drawn 3D wolves inspired by highly successful personas across the world.
                     </p>
                 </div>
 

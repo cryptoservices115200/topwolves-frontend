@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Home extends React.Component {
-    
+
     render() {
         return (
             <div className='w-full' style={{
@@ -20,20 +20,19 @@ class Home extends React.Component {
                                 Unleashing the TopWolves
                             </h1>
                             <p className='text-white fontFamily-IBMPlex-Medium leading-loose'>
-                                Unleashing the Top Wolves, with great instinctive powers and intelligence they will hunt down and navigate through the NFT Forest together. Specially designed for conquering the wild and equipped with traits to win, they will sense Apes and Kongs miles away and set up the perfect ambush
+                                Unleashing the Top Wolves, with great instinctive powers and intelligence they will hunt down and navigate through the NFT Forest together. Specially designed for conquering the wild and equipped with traits to win, they will sense Apes and Kongs miles away and set up the perfect ambush. Claim your very own wolf on 7th May 2022.
                             </p>
                             <div className='button-pink rounded-full w-max hidden lg:block'>
-                                <a className="text-md font-bold px-4 py-3 block cursor-pointer" href="https://discord.gg/4n8Dz23bVR" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
+                                <a className="text-2xl font-bold fontFamily-ZenDot px-8 py-6 block cursor-pointer" href="https://discord.gg/ueCVC5TrgZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
                             </div>
                         </div>
-
                         <div className='relative w-auto lg:w-1/2'>
                             <img className='object-contain' src='/Images/main_character.png' alt='main_character'></img>
                         </div>
                         <div className='button-pink rounded-full w-max block lg:hidden'>
-                            <a className="text-md font-bold px-4 py-3 block cursor-pointer" href="https://discord.gg/4n8Dz23bVR" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
+                            <a className="text-md font-bold px-4 py-3 block cursor-pointer" href="https://discord.gg/ueCVC5TrgZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
                         </div>
-                    </div>
+                        </div>
                 </div>
             </div>
         )
