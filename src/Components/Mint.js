@@ -2,7 +2,7 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
-const date1 = 1652047200000;
+const date1 = 1651968000;
 
 class Mint extends React.Component {
 
