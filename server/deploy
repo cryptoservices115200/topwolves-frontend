@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "npm clean install with only prod dependencies"
+npm ci --only=prod
+
+echo "Creating aws deployable file with latest and greatest" 
+touch /tmp/files.zip
+rm /tmp/files.zip
+zip -r /tmp/files.zip -@ < zip.lst
+
+echo "Configure aws"
+aws configure
+
+echo "Deploying to aws"
+aws lambda update-function-code --function-name TW-Server --zip-file fileb:///tmp/files.zip

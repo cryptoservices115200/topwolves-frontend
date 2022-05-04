@@ -56,13 +56,13 @@ class Container extends React.Component {
 
         let accounts = await web3.eth.getAccounts();
         let balanceOfNative = await web3.eth.getBalance(accounts[0]);
-        
+
         this.setState({
           address: accounts[0],
           balance: balanceOfNative,
           isConnected: action
         })
-        
+
         eventBus.dispatch('isConnected', { data: { 'account': accounts[0], 'isConnected': action, 'balance': balanceOfNative } });
       })()
     } else {
@@ -95,12 +95,10 @@ class Container extends React.Component {
 
     let address = this.state.address
       let mintState = await contract.methods.getSetting().call()
-      
-      axios.post('http://localhost:5000/api/getProof', {
-        address: address
-      })
+
+      axios.get('https://tu2367lj27.execute-api.us-east-2.amazonaws.com/default/TW-Server?address=' + address) 
       .then((res) => {
-        
+
         // console.log(res.data.hexProof)
         let mintStep = parseInt(mintState[0]);
         let proof, isWhitelistMember, price;
@@ -178,7 +176,7 @@ class Container extends React.Component {
   async fetchMintSettings() {
     let mintState = await contract.methods.getSetting().call()
     let mintPrice, mintStep
-    
+
     mintStep = parseInt(mintState[0])
     if(mintStep === 1) {
       mintPrice = parseInt(mintState[2])
