@@ -104,7 +104,7 @@ class Mint extends React.Component {
                         {!this.state.countdown && (
                             <div className='flex flex-col w-full space-y-5 text-center'>
                                 <div className='text-white' >
-                                    <Countdown date={Date.now() + 5000} renderer={this.CoundownRenderer} onComplete={() => this.onCompleted()} />
+                                    <Countdown date={date1} renderer={this.CoundownRenderer} onComplete={() => this.onCompleted()} />
                                 </div>
 
                                 
