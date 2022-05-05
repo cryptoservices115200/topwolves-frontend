@@ -2,8 +2,9 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
-const date1 = 1651953600000;   //Date.now() + 5000
+// const date1 = 1651953600000;   //Date.now() + 5000
 
+const date1 = Date.now() + 3000;
 
 // const date1 = new Date(2018, 01, 24, 10, 33, 30, 0);
 class Mint extends React.Component {
@@ -129,7 +130,7 @@ class Mint extends React.Component {
                                     }}
                                     type='text'
                                     id='txt_price'
-                                    value={ this.state.address ? (this.state.mintPrice * this.state.mintCount / (10**18)): '0'} readOnly>
+                                    value={(this.state.mintPrice * this.state.mintCount / (10**18))} readOnly>
                                 </input>
                                 <input
                                     className='bg-transparent border-2 rounded-full px-4 py-2 text-white focus:outline-none'
