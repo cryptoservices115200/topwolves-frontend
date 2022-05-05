@@ -2,8 +2,9 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
-const date1 = 1651968000000;
+const date1 = 1651953600000;   //Date.now() + 5000
 
+// const date1 = new Date(2018, 01, 24, 10, 33, 30, 0);
 class Mint extends React.Component {
 
     constructor() {
@@ -21,6 +22,8 @@ class Mint extends React.Component {
     }
 
     componentDidMount() {
+        this.setState({countdown:false});
+
         eventBus.on('updateMintPrice', (_event) => {
             this.setState({
                 ...this.state,
@@ -43,9 +46,12 @@ class Mint extends React.Component {
     //       {days} d {hours} h, {minutes} m, {seconds} s
     //     </>
     //   )
-    CoundownRenderer({ days, hours, minutes, seconds, completed }) {
-        if(completed == true)
-            this.setState({countdown:true});
+    CoundownRenderer({ days, hours, minutes, seconds, completed  }) {
+        // console.log(completed);
+        // if(completed)
+        //     {
+        //         return(<></>);
+        //     }
 
         return (
             <>
@@ -77,6 +83,10 @@ class Mint extends React.Component {
           );
     }
 
+    onCompleted() {
+        this.setState({countdown:true})
+    }
+
     render() {
         return (
             <div className='py-1' style={{
@@ -94,13 +104,13 @@ class Mint extends React.Component {
                         {!this.state.countdown && (
                             <div className='flex flex-col w-full space-y-5 text-center'>
                                 <div className='text-white' >
-                                    <Countdown date={date1} renderer={this.CoundownRenderer} />
+                                    <Countdown date={1651968000000} renderer={this.CoundownRenderer} onComplete={() => this.onCompleted()} />
                                 </div>
 
                                 
                             </div>
                         )}
-                        {!this.state.countdown && (
+                        {this.state.countdown && (
                             <div className='w-1/2 justify-center flex flex-col space-y-5 m0auto text-center'>
                                 <h1 className='text-white text-2xl font-bold fontFamily-ZenDot
                                                     sm:text-3xl md:text-4xl lg:text-5xl'
