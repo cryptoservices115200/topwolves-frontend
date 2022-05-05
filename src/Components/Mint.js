@@ -2,9 +2,9 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
-// const date1 = 1651953600000;   //Date.now() + 5000
+const date1 = 1651953600000;   //Date.now() + 5000
 
-const date1 = Date.now() + 3000;
+// const date1 = Date.now() + 3000;
 
 // const date1 = new Date(2018, 01, 24, 10, 33, 30, 0);
 class Mint extends React.Component {
