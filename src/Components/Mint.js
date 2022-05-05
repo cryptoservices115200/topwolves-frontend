@@ -11,6 +11,9 @@ class Mint extends React.Component {
 
         this.state = {
             mintCount: 1,
+            address: '',
+            balance: 0,
+            isConnected: false,
             mintPrice: 0,
             countdown: false
         }
@@ -22,6 +25,15 @@ class Mint extends React.Component {
             this.setState({
                 ...this.state,
                 mintPrice: _event.price
+            })
+        })
+
+        eventBus.on('isConnected', (_event) => {
+            this.setState({
+                ...this.state,
+                address: _event.data.account,
+                balance: _event.data.balance,
+                isConnected: _event.data.isConnected,
             })
         })
     }
@@ -88,7 +100,7 @@ class Mint extends React.Component {
                                 
                             </div>
                         )}
-                        {this.state.countdown && (
+                        {!this.state.countdown && (
                             <div className='w-1/2 justify-center flex flex-col space-y-5 m0auto text-center'>
                                 <h1 className='text-white text-2xl font-bold fontFamily-ZenDot
                                                     sm:text-3xl md:text-4xl lg:text-5xl'
@@ -105,7 +117,7 @@ class Mint extends React.Component {
                                     }}
                                     type='text'
                                     id='txt_price'
-                                    value={(this.state.mintPrice * this.state.mintCount / (10**18))} readOnly>
+                                    value={ this.state.address ? (this.state.mintPrice * this.state.mintCount / (10**18)): '0'} readOnly>
                                 </input>
                                 <input
                                     className='bg-transparent border-2 rounded-full px-4 py-2 text-white focus:outline-none'
