@@ -2,7 +2,7 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
-const date1 = 1651953600000;   //Date.now() + 5000
+const date1 = Date.now() + 5000 // 1651953600000
 
 // const date1 = Date.now() + 3000;
 
@@ -105,7 +105,7 @@ class Mint extends React.Component {
                     <div className='flex flex-col w-1/4 space-y-12 besideImg'>
                             <img className='' src='/Images/left.png' alt='NFT_character'></img>
                     </div>
-                    
+
                     <div className='flex flex-col w-1/2 space-y-12'>
                         {!this.state.countdown && (currnentDate <= date1 ) && (
                             <div className='flex flex-col w-full space-y-5 text-center'>
@@ -113,7 +113,7 @@ class Mint extends React.Component {
                                     <Countdown date={date1} renderer={this.CoundownRenderer} onComplete={() => this.onCompleted()} />
                                 </div>
 
-                                
+
                             </div>
                         )}
                         {(this.state.countdown || (currnentDate > date1 )) &&(
@@ -161,7 +161,7 @@ class Mint extends React.Component {
                     <div className='flex flex-col w-1/4 space-y-12 besideImg'>
                             <img className='' src='/Images/right.png' alt='NFT_character'></img>
                     </div>
-                        
+
                 </div>
             </div>
         )
