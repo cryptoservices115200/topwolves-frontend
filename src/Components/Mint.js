@@ -102,6 +102,9 @@ class Mint extends React.Component {
                     {/* <div className='text-white flex flex-wrap justify-center py-5rem lg:py-7rem'>
 
                     </div> */}
+                    <div className='flex flex-col w-1/4 space-y-12 besideImg'>
+                        <img className='' src='/Images/left.png' alt='NFT_character'></img>
+                    </div>
                     
                     <div className='flex flex-col w-1/2 space-y-12'>
                         {!this.state.countdown && (currnentDate <= date1 ) && (
@@ -154,6 +157,9 @@ class Mint extends React.Component {
                                     onClick={() => eventBus.dispatch('mint', { mintCount: this.state.mintCount, mintPrice: this.state.mintPrice })}>Mint Now</button>
                             </div>
                             )}
+                    </div>
+                    <div className='flex flex-col w-1/4 space-y-12 besideImg'>
+                        <img className='' src='/Images/right.png' alt='NFT_character'></img>
                     </div>
                         
                 </div>
