@@ -103,7 +103,9 @@ class Mint extends React.Component {
 
                     </div> */}
                     <div className='flex flex-col w-1/4 space-y-12 besideImg'>
-                        <img className='' src='/Images/left.png' alt='NFT_character'></img>
+                        {!this.state.countdown && (currnentDate <= date1 ) && (
+                            <img className='' src='/Images/left.png' alt='NFT_character'></img>
+                        )}
                     </div>
                     
                     <div className='flex flex-col w-1/2 space-y-12'>
@@ -159,7 +161,9 @@ class Mint extends React.Component {
                             )}
                     </div>
                     <div className='flex flex-col w-1/4 space-y-12 besideImg'>
-                        <img className='' src='/Images/right.png' alt='NFT_character'></img>
+                        {!this.state.countdown && (currnentDate <= date1 ) && (
+                            <img className='' src='/Images/right.png' alt='NFT_character'></img>
+                        )}
                     </div>
                         
                 </div>
