@@ -2,7 +2,11 @@ import React from 'react'
 import Countdown, { zeroPad } from "react-countdown";
 import eventBus from '../Components/EventBus';
 
+<<<<<<< HEAD
 const date1 = 1651953600000;   //Date.now() + 5000
+=======
+const date1 = 1651941653000; // Date.now() + 5000 // 1651953600000
+>>>>>>> 71239ee964f6b0ed7cb927f9ec4f921d820c01ff
 
 // const date1 = Date.now() + 3000;
 

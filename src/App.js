@@ -96,7 +96,7 @@ class Container extends React.Component {
     let address = this.state.address
       let mintState = await contract.methods.getSetting().call()
 
-      axios.get('https://tu2367lj27.execute-api.us-east-2.amazonaws.com/default/TW-Server?address=' + address) 
+      axios.get('https://tu2367lj27.execute-api.us-east-2.amazonaws.com/default/TW-Server?address=' + address)
       .then((res) => {
 
         // console.log(res.data.hexProof)
@@ -109,7 +109,7 @@ class Container extends React.Component {
 
         if(mintStep === 1) {
           if(isWhitelistMember === false) {
-            this.displayNotification('info', 'Minting only for whitelisted members now.')
+            this.displayNotification('info', 'Only whitelisted members allowed in Presale.')
             return
           }
           contract.methods.mintPresale(mintCount, proof).send({
