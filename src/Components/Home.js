@@ -24,7 +24,7 @@ class Home extends React.Component {
                             </p>
                             <div style = {{display:'flex', justifyContent:'space-around'}}>
                                 <div className='button-pink rounded-full w-max hidden lg:block'>
-                                    <a className="text-2xl font-bold fontFamily-ZenDot px-4 py-6 block cursor-pointer" href="https://discord.gg/ueCVC5TrgZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
+                                    <a className="text-2xl font-bold fontFamily-ZenDot px-4 py-6 block cursor-pointer" href="https://discord.gg/K7g4Wp3HzZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
                                     
                                 </div>
                                 <div className='button-pink rounded-full w-max hidden lg:block'>
@@ -36,7 +36,7 @@ class Home extends React.Component {
                             <img className='object-contain' src='/Images/main_character.png' alt='main_character'></img>
                         </div>
                         <div className='button-pink rounded-full w-max block lg:hidden'>
-                            <a className="text-md font-bold px-8 py-3 block cursor-pointer" href="https://discord.gg/ueCVC5TrgZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
+                            <a className="text-md font-bold px-8 py-3 block cursor-pointer" href="https://discord.gg/K7g4Wp3HzZ" target="_blank" rel="noopener noreferrer">Join Our Discord</a>
                         </div>
                         </div>
                 </div>

@@ -62,7 +62,7 @@ class Navbar extends React.Component {
                                 <i className='fab fa-twitter'></i>
                             </span>
                         </a>
-                        <a href='https://discord.gg/ueCVC5TrgZ' target="_blank" rel="noopener noreferrer">
+                        <a href='https://discord.gg/K7g4Wp3HzZ' target="_blank" rel="noopener noreferrer">
                             <span className='text-white text-xl cursor-pointer'>
                                 <i className='fab fa-discord'></i>
                             </span>
