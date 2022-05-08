@@ -109,7 +109,7 @@ class Container extends React.Component {
 
         if(mintStep === 1) {
           if(isWhitelistMember === false) {
-            this.displayNotification('info', 'You are not allowed to mint now.')
+            this.displayNotification('info', 'Minting only for whitelisted members now.')
             return
           }
           contract.methods.mintPresale(mintCount, proof).send({
