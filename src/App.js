@@ -51,7 +51,7 @@ class Container extends React.Component {
         await window.ethereum.request({ method: 'eth_requestAccounts' });
         await window.ethereum.request({
           method: 'wallet_switchEthereumChain',
-          params: [{ chainId: '0x4' }]
+          params: [{ chainId: '0x1' }]
         });
 
         let accounts = await web3.eth.getAccounts();
