@@ -1,5 +1,7 @@
 const contractInfo = {
-  address: '0x56a04C679DB8435089f13e0625DAF1048690b872', // 0x56a04C679DB8435089f13e0625DAF1048690b872 0x5F3713e0fB943ddC2Af1c3C829A9417586C86566
+  address: '0x2E1E2FC6DddAb977e2e782012aB900dAAE0E3566', // 0x56a04C679DB8435089f13e0625DAF1048690b872 0x5F3713e0fB943ddC2Af1c3C829A9417586C86566/
+
+  //0x2E1E2FC6DddAb977e2e782012aB900dAAE0E3566 is testNET !!!!!
   abi: [
     { inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
     {
@@ -249,6 +251,13 @@ const contractInfo = {
     },
     {
       inputs: [],
+      name: 'GiveawayLimit',
+      outputs: [{ internalType: 'uint16', name: '', type: 'uint16' }],
+      stateMutability: 'view',
+      type: 'function',
+    },
+    {
+      inputs: [],
       name: 'MAX_PER_WALLET',
       outputs: [{ internalType: 'uint8', name: '', type: 'uint8' }],
       stateMutability: 'view',
@@ -481,13 +490,6 @@ const contractInfo = {
       name: 'safeTransferFrom',
       outputs: [],
       stateMutability: 'nonpayable',
-      type: 'function',
-    },
-    {
-      inputs: [],
-      name: 'secretFreeMintLimit',
-      outputs: [{ internalType: 'uint16', name: '', type: 'uint16' }],
-      stateMutability: 'view',
       type: 'function',
     },
     {
