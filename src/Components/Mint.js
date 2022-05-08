@@ -92,7 +92,7 @@ class Mint extends React.Component {
     render() {
         let currnentDate = new Date();
         return (
-            <div className='py-1' style={{
+            <div className='py-1' id = "mint" style={{
                 backgroundImage: 'linear-gradient(90deg, rgba(246, 18, 126, 0.9), rgba(246, 18, 126, 0.5), rgba(246, 18, 126, 0.2), transparent)'
             }}>
 
